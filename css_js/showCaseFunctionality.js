@@ -1,33 +1,65 @@
-const items = document.querySelectorAll(".cycleItem");
-const rButton = document.getElementById("rightCycleButton");
-const lButton = document.getElementById("leftCycleButton")
-let currentIndex = 0;
+const selecItem0 = document.getElementById("selectionItem_0");
+const selecItem1 = document.getElementById("selectionItem_1");
+const selecItem2 = document.getElementById("selectionItem_2");
+let currentlyActive = 0;
 
-//move to the right side the set active - so that it appears to come from the right
-rButton.addEventListener("click", () => {
-    items[currentIndex].classList.remove("active");
-    
-    currentIndex = (currentIndex + 1) % items.length;
+const asButtons = document.querySelectorAll(".selectionItem button");
 
-    items[currentIndex].classList.add("active");
-    items[currentIndex].classList.remove("hidden");
+selecItem0.style.borderLeft ="none";
 
-    setTimeout(() => {
-        items[(currentIndex - 1 + items.length) % items.length].classList.add("hidden");
-    }, 500); 
+asButtons[0].addEventListener("click", ()=>{
+    if(currentlyActive == 0)
+        return;
+
+    switch(currentlyActive)
+    {
+    case 1:
+        selecItem1.classList.remove("selected");
+        break;
+    case 2:
+        selecItem2.classList.remove("selected");
+        break;
+    }
+
+    selecItem0.classList.add("selected");
+
+    currentlyActive=0;
 });
 
-//move to the left side the set active - so that it appears to come from the left
-lButton.addEventListener("click", () => {
-    items[currentIndex].classList.remove("active");
-    
-    currentIndex = (currentIndex - 1 + items.length) % items.length;
-    let nextItem = items[currentIndex].classList;
+asButtons[1].addEventListener("click", ()=>{
+    if(currentlyActive == 1)
+        return;
 
-    nextItem.remove("hidden");
-    nextItem.add("active");
+    switch(currentlyActive)
+    {
+    case 0:
+        selecItem0.classList.remove("selected");
+        break;
+    case 2:
+        selecItem2.classList.remove("selected");
+        break;
+    }
 
-    setTimeout(() => {
-        items[(currentIndex + 1) % items.length].classList.add("hidden");
-    }, 500); 
+    selecItem1.classList.add("selected");
+
+    currentlyActive=1;
+});
+
+asButtons[2].addEventListener("click", ()=>{
+    if(currentlyActive == 2)
+        return;
+
+    switch(currentlyActive)
+    {
+    case 0:
+        selecItem0.classList.remove("selected");
+        break;
+    case 1:
+        selecItem1.classList.remove("selected");
+        break;
+    }
+
+    selecItem2.classList.add("selected");
+
+    currentlyActive=2;
 });

@@ -77,7 +77,7 @@ body {
 }
 
 .mainContent {
-    flex-grow: 1;
+    flex-grow: 0;
     background-color: #1f1f1f;
     padding: 20px;
 }

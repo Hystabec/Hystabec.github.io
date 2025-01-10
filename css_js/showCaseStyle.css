@@ -1,61 +1,42 @@
-.cycleContainer {
-    position: relative;
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    border: 2px solid #333;
-    border-radius: 10px;
-    background: white;
+.mainContent {
+    flex-grow: 1;
+    background-color: #1f1f1f;
+    padding: 0px;
 }
 
-.cycleItem {
-    position: absolute;
-    top : 0;
-    left: 100%;
-    width: 100%;
+.selectionContainer {
+    position: relative;
+    height: 50px;
+    overflow: hidden;
+    list-style-type: none;
+    align-items: flex-start;
+    background-color: #181818;
+}
+
+.selectionContainer .selectionItem {
+    float: left;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: auto;
+    border: 1px solid gray;
+}
+
+.selectionContainer .selectionItem.selected {
+    border-bottom: 0px;
+    background: #1f1f1f;
+}
+
+.selectionContainer .selectionItem button {
+    border:  none;
+    background-color: #181818;
+    height: 100%;
     font-size: 24px;
     font-weight: bold;
-    color: #333;
+    color: gray;
 }
 
-.cycleItem.transition{
-    transition: left 0.5s ease-in-out;
-}
-
-.cycleItem.startLeft{
-    left: -100%;
-}
-
-.cycleItem.startRight{
-    left: 100%;
-}
-
-.cycleItem.active{
-    left: 0;
-}
-
-.cycleItem.hidden{
-    display: none;
-    left: 100%;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    font-weight: bold;
-    color: white;
-    background: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-button:hover {
-    background: #0056b3;
+.selectionContainer .selectionItem.selected button {
+    color: #dbdbdb;
+    background: #1f1f1f;
 }
