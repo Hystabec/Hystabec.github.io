@@ -40,3 +40,11 @@
     color: #dbdbdb;
     background: #1f1f1f;
 }
+
+.selectionItemContent {
+    display: none;
+}
+
+.selectionItemContent.active {
+    display: block;
+}
