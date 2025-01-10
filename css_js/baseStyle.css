@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
@@ -48,7 +48,7 @@ body {
     margin-bottom: 15px;
     text-align: center;
     border-radius: 15px;
-    border: 1px dotted gray;
+    border: 1px solid gray;
 }
 
 .sideBar nav ul li .currentPage {
@@ -76,7 +76,7 @@ body {
     color: #2D7AD6;
 }
 
-.mainContent{
+.mainContent {
     flex-grow: 1;
     background-color: #1f1f1f;
     padding: 20px;
