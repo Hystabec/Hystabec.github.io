@@ -36,6 +36,12 @@ body {
     text-align: left;
 }
 
+.sideBar .title hr {
+    display: block;
+    border: 0;
+    border-top: 2px solid gray;
+}
+
 .sideBar nav ul {
     list-style-type: none;
     width: 100%;

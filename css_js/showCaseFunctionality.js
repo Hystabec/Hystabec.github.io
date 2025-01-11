@@ -69,6 +69,7 @@ asButtons[2].addEventListener("click", ()=>{
     currentlyActive=2;
 });
 
+//this make the boarder along the selection bar extend all the way across the screen
 let selecItemFiller = document.getElementById("selectionItem_Filler");
 let widthTaken = 0;
 

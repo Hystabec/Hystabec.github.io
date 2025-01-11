@@ -18,7 +18,7 @@
     height: 100%;
     padding-left: 10px;
     padding-right: 10px;
-    width: auto; /*if this changes update .selectionContainer .selectionItem.fillerItem width*/
+    width: auto;
     border: 1px solid gray;
     text-align: center;
 }
