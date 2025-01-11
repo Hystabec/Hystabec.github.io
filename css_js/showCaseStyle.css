@@ -18,7 +18,7 @@
     height: 100%;
     padding-left: 10px;
     padding-right: 10px;
-    width: 100px; /*if this changes update .selectionContainer .selectionItem.fillerItem width*/
+    width: auto; /*if this changes update .selectionContainer .selectionItem.fillerItem width*/
     border: 1px solid gray;
     text-align: center;
 }
@@ -40,7 +40,7 @@
 .selectionContainer .selectionItem.fillerItem {
     border-top: none;
     border-right: none;
-    width: calc(100% - calc(100px * 3)); /*100% - the width and number of the other selectable elmenets*/
+    /*width: calc(100% - calc(100px * 3));*/ /*100% - the width and number of the other selectable elmenets*/
 }
 
 .selectionContainer .selectionItem.selected button {

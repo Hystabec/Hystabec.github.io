@@ -11,7 +11,7 @@ const asButtons = document.querySelectorAll(".selectionItem button");
 let currentlyActive = 0;
 
 //looks better without left border as its the first element
-selecItem0.style.borderLeft ="none";
+selecItem0.style.borderLeft = "none";
 
 //This solution seems a little cluncky but the best I could make with limited JS knowledge
 function removeLastClasses(index)
@@ -68,3 +68,12 @@ asButtons[2].addEventListener("click", ()=>{
 
     currentlyActive=2;
 });
+
+let selecItemFiller = document.getElementById("selectionItem_Filler");
+let widthTaken = 0;
+
+widthTaken += selecItem0.getBoundingClientRect().width;
+widthTaken += selecItem1.getBoundingClientRect().width;
+widthTaken += selecItem2.getBoundingClientRect().width;
+
+selecItemFiller.style.width = (document.getElementById("selectionBarContainer").getBoundingClientRect().width - widthTaken) + "px";
