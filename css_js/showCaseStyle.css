@@ -18,8 +18,9 @@
     height: 100%;
     padding-left: 10px;
     padding-right: 10px;
-    width: auto;
+    width: 100px; /*if this changes update .selectionContainer .selectionItem.fillerItem width*/
     border: 1px solid gray;
+    text-align: center;
 }
 
 .selectionContainer .selectionItem.selected {
@@ -36,6 +37,12 @@
     color: gray;
 }
 
+.selectionContainer .selectionItem.fillerItem {
+    border-top: none;
+    border-right: none;
+    width: calc(100% - calc(100px * 3)); /*100% - the width and number of the other selectable elmenets*/
+}
+
 .selectionContainer .selectionItem.selected button {
     color: #dbdbdb;
     background: #1f1f1f;
@@ -47,4 +54,5 @@
 
 .selectionItemContent.active {
     display: block;
+    padding: 15px;
 }
