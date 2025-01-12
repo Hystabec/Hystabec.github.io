@@ -1,10 +1,14 @@
 const selecItem0 = document.getElementById("selectionItem_0");
 const selecItem1 = document.getElementById("selectionItem_1");
 const selecItem2 = document.getElementById("selectionItem_2");
+const selecItem3 = document.getElementById("selectionItem_3");
+const selecItem4 = document.getElementById("selectionItem_4");
 
 const selecContent0 = document.getElementById("selectionItemContent_0");
 const selecContent1 = document.getElementById("selectionItemContent_1");
 const selecContent2 = document.getElementById("selectionItemContent_2");
+const selecContent3 = document.getElementById("selectionItemContent_3");
+const selecContent4 = document.getElementById("selectionItemContent_4");
 
 const asButtons = document.querySelectorAll(".selectionItem button");
 
@@ -29,6 +33,14 @@ function removeLastClasses(index)
     case 2:
         selecItem2.classList.remove("selected");
         selecContent2.classList.remove("active");
+        break;
+    case 3:
+        selecItem3.classList.remove("selected");
+        selecContent3.classList.remove("active");
+        break;
+    case 4:
+        selecItem4.classList.remove("selected");
+        selecContent4.classList.remove("active");
         break;
     }
 }
@@ -69,6 +81,31 @@ asButtons[2].addEventListener("click", ()=>{
     currentlyActive=2;
 });
 
+asButtons[3].addEventListener("click", ()=>{
+    if(currentlyActive == 3)
+        return;
+
+    removeLastClasses(currentlyActive);
+
+    selecItem3.classList.add("selected");
+    selecContent3.classList.add("active");
+
+    currentlyActive=3;
+});
+
+asButtons[4].addEventListener("click", ()=>{
+    if(currentlyActive == 4)
+        return;
+
+    removeLastClasses(currentlyActive);
+
+    selecItem4.classList.add("selected");
+    selecContent4.classList.add("active");
+
+    currentlyActive=4;
+});
+
+
 //this make the boarder along the selection bar extend all the way across the screen
 let selecItemFiller = document.getElementById("selectionItem_Filler");
 let widthTaken = 0;
@@ -76,5 +113,7 @@ let widthTaken = 0;
 widthTaken += selecItem0.getBoundingClientRect().width;
 widthTaken += selecItem1.getBoundingClientRect().width;
 widthTaken += selecItem2.getBoundingClientRect().width;
+widthTaken += selecItem3.getBoundingClientRect().width;
+widthTaken += selecItem4.getBoundingClientRect().width;
 
 selecItemFiller.style.width = (document.getElementById("selectionBarContainer").getBoundingClientRect().width - widthTaken) + "px";
