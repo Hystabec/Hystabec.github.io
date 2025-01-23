@@ -56,3 +56,12 @@
     display: block;
     padding: 15px;
 }
+
+.showCaseImage {
+    width: 500px;
+}
+
+iframe {
+    width: 1600px;
+    height: 900px;
+}
