@@ -1,3 +1,5 @@
+import { resizeSideBar } from "./sideBarSizing.js";
+
 const selecItem0 = document.getElementById("selectionItem_0");
 const selecItem1 = document.getElementById("selectionItem_1");
 const selecItem2 = document.getElementById("selectionItem_2");
@@ -55,6 +57,8 @@ asButtons[0].addEventListener("click", ()=>{
     selecContent0.classList.add("active");
 
     currentlyActive=0;
+
+    resizeSideBar(originalPageSize, selecContent0.getBoundingClientRect().height + selectionBarHeight);
 });
 
 asButtons[1].addEventListener("click", ()=>{
@@ -67,6 +71,8 @@ asButtons[1].addEventListener("click", ()=>{
     selecContent1.classList.add("active");
 
     currentlyActive=1;
+
+    resizeSideBar(originalPageSize, selecContent1.getBoundingClientRect().height + selectionBarHeight);
 });
 
 asButtons[2].addEventListener("click", ()=>{
@@ -79,6 +85,8 @@ asButtons[2].addEventListener("click", ()=>{
     selecContent2.classList.add("active");
 
     currentlyActive=2;
+
+    resizeSideBar(originalPageSize, selecContent2.getBoundingClientRect().height + selectionBarHeight);
 });
 
 asButtons[3].addEventListener("click", ()=>{
@@ -91,6 +99,8 @@ asButtons[3].addEventListener("click", ()=>{
     selecContent3.classList.add("active");
 
     currentlyActive=3;
+
+    resizeSideBar(originalPageSize, selecContent3.getBoundingClientRect().height + selectionBarHeight);
 });
 
 asButtons[4].addEventListener("click", ()=>{
@@ -103,6 +113,8 @@ asButtons[4].addEventListener("click", ()=>{
     selecContent4.classList.add("active");
 
     currentlyActive=4;
+
+    resizeSideBar(originalPageSize, selecContent4.getBoundingClientRect().height + selectionBarHeight);
 });
 
 
@@ -117,3 +129,7 @@ widthTaken += selecItem3.getBoundingClientRect().width;
 widthTaken += selecItem4.getBoundingClientRect().width;
 
 selecItemFiller.style.width = (document.getElementById("selectionBarContainer").getBoundingClientRect().width - widthTaken) + "px";
+
+const originalPageSize = document.getElementById("sideBarBox").getBoundingClientRect().height;
+const selectionBarHeight = selecItem0.getBoundingClientRect().height;
+resizeSideBar(originalPageSize, selecContent0.getBoundingClientRect().height + selectionBarHeight);

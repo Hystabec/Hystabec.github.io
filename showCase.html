@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="sideBar">
+        <div id="sideBarBox" class="sideBar">
             <nav>
                 <div class="title">
                     <h2>Explorer</h2>
@@ -22,7 +22,7 @@
                 </ul>
             </nav>
         </div>
-        <main class="mainContent">
+        <main id="mainContentBox" class="mainContent">
             <ul id="selectionBarContainer" class="selectionContainer">
                 <div id="selectionItem_0" class="selectionItem selected">
                     <button>Democracy Demolition</button>
@@ -41,7 +41,8 @@
                 </div>
                 <div id="selectionItem_Filler" class="selectionItem fillerItem"></div>
             </ul>
-            <div id="selectionItemContent_0" class="selectionItemContent active"> 
+            <div id="selectionItemContent_0" class="selectionItemContent active">  
+                <p>I worked as the lead programmer on Democracy Demolition</p>
                 <a href="https://github.com/Hystabec/DemocracyDemolition" target="_blank" rel="noopener">On GitHub</a>
                 <br>
                 <a href="https://n1all.itch.io/democracy-demolition" target="_blank" rel="noopener">On Itch.io</a>
@@ -51,18 +52,21 @@
                 <img class="showCaseImage" src="imgs/DD/DD_GamePlay1.png" alt="game play example image">
             </div>
             <div id="selectionItemContent_1" class="selectionItemContent">
+                <p>I worked as a programmer on Absorbathon focusing on AI and procedural generation</p>
                 <a href="https://hystabec.itch.io/absorbathon" target="_blank" rel="noopener">On Itch.io</a>
                 <br>
                 <img class="showCaseImage" src="imgs/A/A_MainMenu.png" alt="absorbathon main menu screen">
                 <br>
                 <img class="showCaseImage" src="imgs/A/A_GamePlay1.png" alt="game play example image">
             </div>
-            <div id="selectionItemContent_2" class="selectionItemContent">
+            <div id="selectionItemContent_2" class="selectionItemContent"> 
+                <p>Daedalus Engine is a game engine that i'm currently developing</p>
                 <a href="https://github.com/Hystabec/DaedalusEngine" target="_blank" rel="noopener">On GitHub</a>
                 <br>
                 <img class="showCaseImage" src="imgs/DE/DE_ExampleImage.png" alt="image of current renderer">
             </div>
             <div id="selectionItemContent_3" class="selectionItemContent">
+                <p>This is the first game engine that I devloped. It features a working editor, save/load system, image and text rendering</p>
                 <a href="https://github.com/Hystabec/Game-Engine-Development" target="_blank" rel="noopener">On GitHub</a>
                 <br>
                 <img class="showCaseImage" src="imgs/GE/GE_MainEditor.png" alt="image of the editor">
@@ -72,12 +76,13 @@
                 <img class="showCaseImage" src="imgs/GE/GE_DemoLevel.png" alt="image of the demo level">
             </div>
             <div id="selectionItemContent_4" class="selectionItemContent">
+                <p>This is the website your currently viewing made using HTML, CSS, JS</p>
                 <a href="https://github.com/Hystabec/Personal-Website" target="_blank" rel="noopener">On GitHub</a>
                 <br>
-                <iframe src="index.html"></iframe>
+                <iframe src="index.html" title="link to an inline frame of the index page"></iframe>
             </div>
         </main>
     </div>
-    <script src="css_js/showCaseFunctionality.js"></script>
+    <script src="css_js/showCaseFunctionality.js" type="module"></script>
 </body>
 </html>
