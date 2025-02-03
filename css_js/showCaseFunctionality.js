@@ -1,4 +1,19 @@
-import { resizeSideBar } from "./sideBarSizing.js";
+function resizeSideBar(defaultHeight, contentHeight)
+{
+    let sideBar = document.getElementById("sideBarBox");
+    let mainContent = document.getElementById("mainContentBox");
+
+    if(contentHeight > defaultHeight)
+    {
+        sideBar.style.height = contentHeight + "px";
+        return contentHeight;
+    }
+    else
+    {
+        sideBar.style.height = defaultHeight + "px";
+        return defaultHeight;
+    }
+}
 
 const selecItem0 = document.getElementById("selectionItem_0");
 const selecItem1 = document.getElementById("selectionItem_1");
@@ -19,7 +34,6 @@ let currentlyActive = 0;
 //looks better without left border as its the first element
 selecItem0.style.borderLeft = "none";
 
-//This solution seems a little cluncky but the best I could make with limited JS knowledge
 function removeLastClasses(index)
 {
     switch(index)

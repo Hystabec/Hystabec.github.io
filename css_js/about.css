@@ -1,0 +1,24 @@
+.mainContent .links ul {
+    list-style-type: none;
+    width: 100%;
+    padding-top: 10px;
+}
+
+.mainContent .links ul li {
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 10px 25px;
+}
+
+.mainContent .links ul li.L {
+    text-align: left;
+}
+
+.mainContent .links ul li.R {
+    text-align: right;
+}
+
+.mainContent .links ul li .linkContainer img {
+    width: 50px;
+}
