@@ -19,6 +19,11 @@
     text-align: right;
 }
 
+.mainContent .links ul li .linkContainer {
+    align-items: flex-start;
+    display: inline-block;
+}
+
 .mainContent .links ul li .linkContainer img {
     width: 50px;
 }
