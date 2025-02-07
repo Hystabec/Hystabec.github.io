@@ -6,13 +6,21 @@ function resizeSideBar(defaultHeight, contentHeight)
     if(contentHeight > defaultHeight)
     {
         sideBar.style.height = contentHeight + "px";
+        resizeTopBarExtra(widthTaken);
         return contentHeight;
     }
     else
     {
         sideBar.style.height = defaultHeight + "px";
+        resizeTopBarExtra(widthTaken);
         return defaultHeight;
     }
+}
+
+function resizeTopBarExtra(newSize)
+{
+    let selecItemFiller = document.getElementById("selectionItem_Filler");
+    selecItemFiller.style.width = (document.getElementById("selectionBarContainer").getBoundingClientRect().width - newSize) + "px";
 }
 
 const selecItem0 = document.getElementById("selectionItem_0");
@@ -21,12 +29,20 @@ const selecItem2 = document.getElementById("selectionItem_2");
 const selecItem3 = document.getElementById("selectionItem_3");
 const selecItem4 = document.getElementById("selectionItem_4");
 
+//this make the boarder along the selection bar extend all the way across the screen
+let widthTaken = 0;
+widthTaken += selecItem0.getBoundingClientRect().width;
+widthTaken += selecItem1.getBoundingClientRect().width;
+widthTaken += selecItem2.getBoundingClientRect().width;
+widthTaken += selecItem3.getBoundingClientRect().width;
+widthTaken += selecItem4.getBoundingClientRect().width;
+resizeTopBarExtra(widthTaken);
+
 const selecContent0 = document.getElementById("selectionItemContent_0");
 const selecContent1 = document.getElementById("selectionItemContent_1");
 const selecContent2 = document.getElementById("selectionItemContent_2");
 const selecContent3 = document.getElementById("selectionItemContent_3");
 const selecContent4 = document.getElementById("selectionItemContent_4");
-
 const asButtons = document.querySelectorAll(".selectionItem button");
 
 let currentlyActive = 0;
@@ -132,17 +148,7 @@ asButtons[4].addEventListener("click", ()=>{
 });
 
 
-//this make the boarder along the selection bar extend all the way across the screen
-let selecItemFiller = document.getElementById("selectionItem_Filler");
-let widthTaken = 0;
 
-widthTaken += selecItem0.getBoundingClientRect().width;
-widthTaken += selecItem1.getBoundingClientRect().width;
-widthTaken += selecItem2.getBoundingClientRect().width;
-widthTaken += selecItem3.getBoundingClientRect().width;
-widthTaken += selecItem4.getBoundingClientRect().width;
-
-selecItemFiller.style.width = (document.getElementById("selectionBarContainer").getBoundingClientRect().width - widthTaken) + "px";
 
 const originalPageSize = document.getElementById("sideBarBox").getBoundingClientRect().height;
 const selectionBarHeight = selecItem0.getBoundingClientRect().height;
