@@ -1,29 +1,58 @@
-.mainContent .links ul {
+.LinkContainer {
+    width: 50%;
+    justify-content: center;
+    margin: 0 auto;
+    transform: translateY(25%);
+}
+
+.LinkContainer h2 {
+    text-align: center;
+    font-size: 2.0em;
+    color: #CE723C;
+    width: auto;
+}
+
+.mainContent ul {
     list-style-type: none;
+    padding-top: 0px;
+}
+
+.mainContent ul li {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
     width: 100%;
-    padding-top: 10px;
 }
 
-.mainContent .links ul li {
-    border: 1px solid gray;
-    border-radius: 15px;
-    margin-bottom: 15px;
-    padding: 10px 25px;
-}
-
-.mainContent .links ul li.L {
+.mainContent ul li:nth-child(odd) {
+    justify-content: flex-start;
     text-align: left;
 }
 
-.mainContent .links ul li.R {
-    text-align: right;
+.mainContent ul li:nth-child(even) {
+    justify-content: flex-end;
+    text-align: right; 
 }
 
-.mainContent .links ul li .linkContainer {
-    align-items: flex-start;
-    display: inline-block;
+.mainContent ul a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
 }
 
-.mainContent .links ul li .linkContainer img {
-    width: 50px;
+.mainContent ul a:hover {
+    background: rgba(255,255,255,0.4);
+    transform: scale(1.1);
+}
+
+.mainContent ul li img {
+    height: 50px;
 }
