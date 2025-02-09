@@ -162,130 +162,45 @@ const selectionBarHeight = selecItem0.getBoundingClientRect().height;
 resizeSideBar(originalPageSize, selecContent0.getBoundingClientRect().height + selectionBarHeight);
 
 //-------------Gallery fun----------------
-
-/*
-This can and should be optimized
-instead of having various varables for each show case item just change the variables when they are going to be used
-*/
-
 let gal_Index = 0;
 let slideInterval = setInterval(nextSlide, 5000, "DD");
 
-//--DD--
-const slides_DD = document.querySelectorAll(".slide.DD");
-const indicatorsContainer_DD = document.querySelector(".indicators.DD");
+let gal_slides;
+let gal_indicatorsCountainer;
+let gal_indicators;
+let gal_pageSet = new Set();
 
-slides_DD.forEach((_, i) => {
-    const indicator = document.createElement("div");
-    indicator.classList.add("indicator");
-    indicator.classList.add("DD");
-    if(i==0) indicator.classList.add("active");
-    indicatorsContainer_DD.appendChild(indicator);
-})
+function assignVariables(sh){
+    gal_slides = document.querySelectorAll(".slide."+sh);
+    gal_indicatorsCountainer = document.querySelector(".indicators."+sh);
 
-const indicators_DD = document.querySelectorAll(".indicator.DD");
-
-//--A--
-const slides_A = document.querySelectorAll(".slide.A");
-const indicatorsContainer_A = document.querySelector(".indicators.A");
-
-slides_A.forEach((_, i) => {
-    const indicator = document.createElement("div");
-    indicator.classList.add("indicator");
-    indicator.classList.add("A");
-    if(i==0) indicator.classList.add("active");
-    indicatorsContainer_A.appendChild(indicator);
-})
-
-const indicators_A = document.querySelectorAll(".indicator.A");
-
-//--LH--
-const slides_LH = document.querySelectorAll(".slide.LH");
-const indicatorsContainer_LH = document.querySelector(".indicators.LH");
-
-slides_LH.forEach((_, i) => {
-    const indicator = document.createElement("div");
-    indicator.classList.add("indicator");
-    indicator.classList.add("LH");
-    if(i==0) indicator.classList.add("active");
-    indicatorsContainer_LH.appendChild(indicator);
-})
-
-const indicators_LH = document.querySelectorAll(".indicator.LH");
-
-//--DE--
-const slides_DE = document.querySelectorAll(".slide.DE");
-const indicatorsContainer_DE = document.querySelector(".indicators.DE");
-
-slides_DE.forEach((_, i) => {
-    const indicator = document.createElement("div");
-    indicator.classList.add("indicator");
-    indicator.classList.add("DE");
-    if(i==0) indicator.classList.add("active");
-    indicatorsContainer_DE.appendChild(indicator);
-})
-
-const indicators_DE = document.querySelectorAll(".indicator.DE");
-
-//--GE--
-const slides_GE = document.querySelectorAll(".slide.GE");
-const indicatorsContainer_GE = document.querySelector(".indicators.GE");
-
-slides_GE.forEach((_, i) => {
-    const indicator = document.createElement("div");
-    indicator.classList.add("indicator");
-    indicator.classList.add("GE");
-    if(i==0) indicator.classList.add("active");
-    indicatorsContainer_GE.appendChild(indicator);
-})
-
-const indicators_GE = document.querySelectorAll(".indicator.GE");
-
-
-//--Generic--
-function showSlide(i, sh) {
-    switch(sh)
+    if(!gal_pageSet.has(sh))
     {
-    case "DD":
-        gal_Index = (i + slides_DD.length) % slides_DD.length;
-        document.querySelector(".slides.DD").style.transform = `translateX(-${gal_Index * 100}%)`;
-        indicators_DD.forEach((indicator, idx) => {
-            indicator.classList.toggle("active", idx === gal_Index);
+        gal_slides.forEach((_, i) => {
+            const indicator = document.createElement("div");
+            indicator.classList.add("indicator");
+            indicator.classList.add(sh);
+            if(i==0) indicator.classList.add("active");
+            gal_indicatorsCountainer.appendChild(indicator);
         })
-        break;
-    case "A":
-        gal_Index = (i + slides_A.length) % slides_A.length;
-        document.querySelector(".slides.A").style.transform = `translateX(-${gal_Index * 100}%)`;
-        indicators_A.forEach((indicator, idx) => {
-            indicator.classList.toggle("active", idx === gal_Index);
-        })
-        break;
-    case "LH":
-        gal_Index = (i + slides_LH.length) % slides_LH.length;
-        document.querySelector(".slides.LH").style.transform = `translateX(-${gal_Index * 100}%)`;
-        indicators_LH.forEach((indicator, idx) => {
-            indicator.classList.toggle("active", idx === gal_Index);
-        })
-        break;
-    case "DE":
-        gal_Index = (i + slides_DE.length) % slides_DE.length;
-        document.querySelector(".slides.DE").style.transform = `translateX(-${gal_Index * 100}%)`;
-        indicators_DE.forEach((indicator, idx) => {
-            indicator.classList.toggle("active", idx === gal_Index);
-        })
-        break;
-    case "GE":
-        gal_Index = (i + slides_GE.length) % slides_GE.length;
-        document.querySelector(".slides.GE").style.transform = `translateX(-${gal_Index * 100}%)`;
-        indicators_GE.forEach((indicator, idx) => {
-            indicator.classList.toggle("active", idx === gal_Index);
-        })
-        break;
+
+        gal_pageSet.add(sh);
     }
+
+    gal_indicators = document.querySelectorAll(".indicator."+sh);
+}
+
+function showSlide(i, sh) {
+    gal_Index = (i + gal_slides.length) % gal_slides.length;
+    document.querySelector(".slides." + sh).style.transform = `translateX(-${gal_Index * 100}%)`;
+    gal_indicators.forEach((indicator, idx) => {
+        indicator.classList.toggle("active", idx === gal_Index);
+    })
 }
 
 function switchViewCase(sh)
 {
+    assignVariables(sh);
     resetInterval(sh);
     startSlide(sh);
 }
@@ -309,4 +224,6 @@ function nextSlide(sh) {
     showSlide(gal_Index + 1, sh);
     resetInterval(sh);
 }
+
+assignVariables("DD");
 //-------------Gallery fun End-------------
