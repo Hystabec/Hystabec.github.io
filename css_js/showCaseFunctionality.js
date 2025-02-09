@@ -147,9 +147,6 @@ asButtons[4].addEventListener("click", ()=>{
     resizeSideBar(originalPageSize, selecContent4.getBoundingClientRect().height + selectionBarHeight);
 });
 
-
-
-
 const originalPageSize = document.getElementById("sideBarBox").getBoundingClientRect().height;
 const selectionBarHeight = selecItem0.getBoundingClientRect().height;
 resizeSideBar(originalPageSize, selecContent0.getBoundingClientRect().height + selectionBarHeight);
