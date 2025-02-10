@@ -47,7 +47,7 @@ const asButtons = document.querySelectorAll(".selectionItem button");
 
 let currentlyActive = 0;
 
-//looks better without left border as its the first element
+//removing left border from the first element
 selecItem0.style.borderLeft = "none";
 
 function removeLastClasses(index)
