@@ -6,11 +6,13 @@
 
 .selectionContainer {
     position: relative;
-    height: 50px;
-    overflow: hidden;
+    height: 60px;
+    overflow: visible;
     list-style-type: none;
     align-items: flex-start;
     background-color: #181818;
+    display: flex;
+    flex-direction: row;
 }
 
 .selectionContainer .selectionItem {
@@ -40,6 +42,7 @@
 .selectionContainer .selectionItem.fillerItem {
     border-top: none;
     border-right: none;
+    overflow: hidden;
     /*width: calc(100% - calc(100px * 3));*/ /*100% - the width and number of the other selectable elmenets*/
 }
 
