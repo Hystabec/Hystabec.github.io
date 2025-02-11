@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css_js/baseStyle.css">
     <link rel="stylesheet" href="css_js/showCaseStyle.css">
-    <title>ES - Show Reels</title>
+    <title>ES - Showcase</title>
 </head>
 <body>
     <div class="container">
@@ -17,7 +17,7 @@
                 </div>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><div class="currentPage">Show Case</li>
+                    <li><div class="currentPage">Showcase</li>
                     <li><a href="about.html">Links</a></li>
                 </ul>
             </nav>
@@ -37,13 +37,13 @@
                     <button>Daedalus Engine</button>
                 </div>
                 <div id="selectionItem_4" class="selectionItem">
-                    <button>Game Engine</button>
+                    <button>FGE</button>
                 </div>
                 <div id="selectionItem_Filler" class="selectionItem fillerItem"></div>
             </ul>
             <div id="selectionItemContent_0" class="selectionItemContent active">  
                 <div class="sideBySide">
-                    <div class="slideContainer temp">
+                    <div class="slideContainer sbs">
                         <div class="slides DD">
                             <img class="showCaseImage slide DD" src="imgs/DD/DD_MainMenu.png" alt="Democracy Demolition main menu">
                             <img class="showCaseImage slide DD" src="imgs/DD/DD_GamePlay1.png" alt="game play example image">
@@ -54,81 +54,122 @@
                         </div>
                         <div class="indicators DD"></div>
                     </div>
-                    <div class="linksBox temp">
-                        <a href="https://github.com/Hystabec/DemocracyDemolition" target="_blank" rel="noopener">On GitHub</a>
+                    <div class="linksBox sbs">
+                        <a href="https://github.com/Hystabec/DemocracyDemolition" target="_blank" rel="noopener">View on GitHub</a>
                         <br>
-                        <a href="https://n1all.itch.io/democracy-demolition" target="_blank" rel="noopener">On Itch.io</a>
+                        <a href="https://n1all.itch.io/democracy-demolition" target="_blank" rel="noopener">View on Itch.io</a>
                     </div>
                 </div>
                 <div class="descriptionBox">
-                    I worked as the lead programmer on Democracy Demolition
+                    <p>
+                        Democracy Demolition is a 2D, 2 player, couch co-op, artillery game made using Unity.<br>
+                        Role: Lead Programmer.<br>
+                        About: While working on Democracy Demolition I acted as the Lead Programmer leading 2 other programmers. I focused on creating the multiplayer capabilities and making many underlying systems such as score functionality, the round and life systems just to name a few. I also focused on maintaining clean and efficient code where possible
+                    </p>
                 </div>
             </div>
             <div id="selectionItemContent_1" class="selectionItemContent">
-                <p>I worked as a programmer on Absorbathon focusing on the AI and procedural level generation that features in the game</p>
-                <a href="https://hystabec.itch.io/absorbathon" target="_blank" rel="noopener">On Itch.io</a>
-                <br>
-                <div class="slideContainer">
-                    <div class="slides A">
-                        <img class="showCaseImage slide A" src="imgs/A/A_MainMenu.png" alt="absorbathon main menu screen">
-                        <img class="showCaseImage slide A" src="imgs/A/A_GamePlay1.png" alt="game play example image">
+                <div class="sideBySide">
+                    <div class="slideContainer sbs">
+                        <div class="slides A">
+                            <img class="showCaseImage slide A" src="imgs/A/A_MainMenu.png" alt="absorbathon main menu screen">
+                            <img class="showCaseImage slide A" src="imgs/A/A_GamePlay1.png" alt="game play example image">
+                        </div>
+                        <div class="controls">
+                            <button class="control" onclick="prevSlide('A')">&#10094</button>
+                            <button class="control" onclick="nextSlide('A')">&#10095</button>
+                        </div>
+                        <div class="indicators A"></div>
                     </div>
-                    <div class="controls">
-                        <button class="control" onclick="prevSlide('A')">&#10094</button>
-                        <button class="control" onclick="nextSlide('A')">&#10095</button>
+                    <div class="linksBox sbs">
+                        <a href="https://hystabec.itch.io/absorbathon" target="_blank" rel="noopener">View on Itch.io</a>
                     </div>
-                    <div class="indicators A"></div>
+                </div>
+                <div class="descriptionBox">
+                    <p>
+                        Absorbathon is a 2D, side scrolling, arcade-esque game made using Unity.<br>
+                        Role: Programmer.<br>
+                        Focus: AI and procedural level generation.<br>
+                        About:
+                    </p>
                 </div>
             </div>
             <div id="selectionItemContent_2" class="selectionItemContent">
-                <p>Looping halls is a tech demo type project that experiments with world looping/non euclidean geometry in Unity</p>
-                <a href="https://github.com/Hystabec/UnityLoopingHalls" target="_blank" rel="noopener">On GitHub</a>
-                <br>
-                <a href="https://hystabec.itch.io/looping-halls" target="_blank" rel="noopener">On Itch.io</a>
-                <br>
-                <div class="slideContainer">
-                    <div class="slides LH">
-                        <img class="showCaseImage slide LH" src="imgs/LH/mainHall.png" alt="image of main hall from Looping Halls">
-                        <img class="showCaseImage slide LH" src="imgs/LH/loopHalls.png" alt="image of all loop halls from Looping Halls">
-                        <img class="showCaseImage slide LH" src="imgs/LH/mapOverview.png" alt="Overview of the map from Looping Halls">
+                <div class="sideBySide">
+                    <div class="slideContainer sbs">
+                        <div class="slides LH">
+                            <img class="showCaseImage slide LH" src="imgs/LH/mainHall.png" alt="image of main hall from Looping Halls">
+                            <img class="showCaseImage slide LH" src="imgs/LH/loopHalls.png" alt="image of all loop halls from Looping Halls">
+                            <img class="showCaseImage slide LH" src="imgs/LH/mapOverview.png" alt="Overview of the map from Looping Halls">
+                        </div>
+                        <div class="controls">
+                            <button class="control" onclick="prevSlide('LH')">&#10094</button>
+                            <button class="control" onclick="nextSlide('LH')">&#10095</button>
+                        </div>
+                        <div class="indicators LH"></div>
                     </div>
-                    <div class="controls">
-                        <button class="control" onclick="prevSlide('LH')">&#10094</button>
-                        <button class="control" onclick="nextSlide('LH')">&#10095</button>
+                    <div class="linksBox sbs">
+                        <a href="https://github.com/Hystabec/UnityLoopingHalls" target="_blank" rel="noopener">View on GitHub</a>
+                        <br>
+                        <a href="https://hystabec.itch.io/looping-halls" target="_blank" rel="noopener">View on Itch.io</a>
                     </div>
-                    <div class="indicators LH"></div>
+                </div>
+                <div class="descriptionBox">
+                    <p>
+                        Looping Halls is a tech demo project that experiments and showcases world looping and non euclidean geometry in Unity.<br>
+                        Role: Solo developer.<br>
+                        About:
+                    </p>
                 </div>
             </div>
             <div id="selectionItemContent_3" class="selectionItemContent"> 
-                <p>Daedalus Engine is a game engine that i'm currently developing in C++</p>
-                <a href="https://github.com/Hystabec/DaedalusEngine" target="_blank" rel="noopener">On GitHub</a>
-                <br>
-                <div class="slideContainer">
-                    <div class="slides DE">
-                        <img class="showCaseImage slide DE" src="imgs/DE/DE_ExampleImage.png" alt="image of current renderer">
+                <div class="sideBySide">
+                    <div class="slideContainer sbs">
+                        <div class="slides DE">
+                            <img class="showCaseImage slide DE" src="imgs/DE/DE_ExampleImage.png" alt="image of current renderer">
+                        </div>
+                        <div class="controls">
+                            <button class="control" onclick="prevSlide('DE')">&#10094</button>
+                            <button class="control" onclick="nextSlide('DE')">&#10095</button>
+                        </div>
+                        <div class="indicators DE"></div>
                     </div>
-                    <div class="controls">
-                        <button class="control" onclick="prevSlide('DE')">&#10094</button>
-                        <button class="control" onclick="nextSlide('DE')">&#10095</button>
+                    <div class="linksBox sbs">
+                        <a href="https://github.com/Hystabec/DaedalusEngine" target="_blank" rel="noopener">View on GitHub</a>
                     </div>
-                    <div class="indicators DE"></div>
+                </div>
+                <div class="descriptionBox">
+                    <p>
+                        Daedalus Engine is a game engine that i'm currently devloping in C++<br>
+                        Role: Solo developer.<br>
+                        About: Daedalus is planned to have both 2D and 3D rendering capabilities using OpenGL. Currently it has basic 2D rendering capabilities using OpenGL.<br>
+                        External libraries: GLFW, GLEW, FreeImage, spdlog, Dear ImGui.
+                    </p>
                 </div>
             </div>
             <div id="selectionItemContent_4" class="selectionItemContent">
-                <p>This is the first game engine that I devloped with C++. It features a working editor, save/load system, image and text rendering</p>
-                <a href="https://github.com/Hystabec/Game-Engine-Development" target="_blank" rel="noopener">On GitHub</a>
-                <br>
-                <div class="slideContainer">
-                    <div class="slides GE">
-                        <img class="showCaseImage slide GE" src="imgs/GE/GE_MainEditor.png" alt="image of the editor">
-                        <img class="showCaseImage slide GE" src="imgs/GE/GE_Profiler.png" alt="image of the profiler">
-                        <img class="showCaseImage slide GE" src="imgs/GE/GE_DemoLevel.png" alt="image of the demo level">
+                <div class="sideBySide">
+                    <div class="slideContainer sbs">
+                        <div class="slides GE">
+                            <img class="showCaseImage slide GE" src="imgs/GE/GE_MainEditor.png" alt="image of the editor">
+                            <img class="showCaseImage slide GE" src="imgs/GE/GE_Profiler.png" alt="image of the profiler">
+                            <img class="showCaseImage slide GE" src="imgs/GE/GE_DemoLevel.png" alt="image of the demo level">
+                        </div>
+                        <div class="controls">
+                            <button class="control" onclick="prevSlide('GE')">&#10094</button>
+                            <button class="control" onclick="nextSlide('GE')">&#10095</button>
+                        </div>
+                        <div class="indicators GE"></div>
                     </div>
-                    <div class="controls">
-                        <button class="control" onclick="prevSlide('GE')">&#10094</button>
-                        <button class="control" onclick="nextSlide('GE')">&#10095</button>
+                    <div class="linksBox sbs">
+                        <a href="https://github.com/Hystabec/Game-Engine-Development" target="_blank" rel="noopener">View on GitHub</a>
                     </div>
-                    <div class="indicators GE"></div>
+                </div>
+                <div class="descriptionBox">
+                    <p>FGE is a 2D game engine that I developed using C++.<br>
+                    Role: Solo developer.<br>
+                    About: FGE is the first game engine that I made. It features a working editor, a save/load system, profiling tools and image/text rendering.<br> 
+                    External libraries: SDL, Dear ImGui and pugixml.</p>
                 </div>
             </div>
         </main>

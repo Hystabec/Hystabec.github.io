@@ -1,0 +1,16 @@
+---General---
+Format text (<p>) in a more visually appealing way
+
+---Home page---
+fill out bio.
+add a better image of myself
+fill out skills and format the image and skill better
+instead of the "Edward Short - Programmer" that should probably be more specific e.g. "Games Programmer" and it should probably be better incorporated into the page design
+
+---Showcase page---
+Go into greater detail about projects on showcase page e.g. talk about features of game engine such as event systems or scene hieracys
+Add images next to the links?
+
+---Links page---
+Line links on one side?
+add a contact me section?
