@@ -1,15 +1,19 @@
 ---General---
 Format text (<p>) in a more visually appealing way
+add website created by me somewhere? at bottom of page?
 
 ---Home page---
 fill out bio.
 add a better image of myself
 fill out skills and format the image and skill better
 instead of the "Edward Short - Programmer" that should probably be more specific e.g. "Games Programmer" and it should probably be better incorporated into the page design
+add compilation of work video 
 
 ---Showcase page---
 Go into greater detail about projects on showcase page e.g. talk about features of game engine such as event systems or scene hieracys
 Add images next to the links?
+Add gameplay videos/gifs to projects
+mention website creation?
 
 ---Links page---
 Line links on one side?
