@@ -151,3 +151,7 @@ img.slide {
     margin-top: 10px;
     padding: 10px;
 }
+
+h4 {
+    display: inline;
+}
