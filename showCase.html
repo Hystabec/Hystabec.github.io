@@ -178,8 +178,25 @@
                         <h4>Role:</h4> Solo developer.<br>
                         <h4>State:</h4> Complete.<br>
                         <h4>Project length:</h4> 22 Weeks.<br>
-                        <h4>About:</h4> FGE is the first game engine that I made. It features a working editor, a save/load system, profiling tools and image/text rendering.<br> 
-                        External libraries: SDL, Dear ImGui and pugixml.
+                        <h4>About:</h4> FGE is the first game engine and editor that I made. I made it during my second year of university.<br>
+                        It features a working editor that consists of:
+                        <ul>
+                            <li>A save/load system</li>
+                            <li>Profiling tools; that allows the user to see how much time profiled function calls are taking and to see a flame graph representation for each update loop.</li>
+                            <li>An inspector; that allow the inspecting of game objects to see their transform and components.</li>
+                            <li>An asset window; that allows importing and use of bitmap assets</li>
+                            <li>A scene hierarchy window; to allow the user to see what game objects are in a scene and how they relate to one another.</li>
+                        </ul>
+                        The engine features:
+                        <ul>
+                            <li>A game object system similar to unity's; game objects have a transform and a list of components attached to it as well as a parent and list of child game objects.</li>
+                            <li>A scene system where game objects are place within the scene the during the update loop all the objects in the active scene are updated.</li>
+                            <li>A collision/physics system that uses axis aligned bounding boxes to detect collisions and fire event when to colliders are overlapping.</li>
+                            <li>Image rendering so the user can add bitmaps to be used in the editor which can then be displayed.</li>
+                            <li>A logging system for any errors, warnings or information log created by the engine or user can be logged to console and saved to a log file.</li>
+                        </ul>
+                        
+                        <h4>External libraries:</h4> SDL, Dear ImGui and pugixml.
                     </p>
                 </div>
             </div>

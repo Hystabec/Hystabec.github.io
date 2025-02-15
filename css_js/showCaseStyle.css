@@ -152,6 +152,10 @@ img.slide {
     padding: 10px;
 }
 
-h4 {
+.descriptionBox h4 {
     display: inline;
+}
+
+.descriptionBox ul {
+    list-style-position: inside;
 }
