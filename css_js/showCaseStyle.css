@@ -18,12 +18,14 @@
 .selectionContainer .selectionItem {
     float: left;
     height: 100%;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
     width: auto;
-    border: 1px solid gray;
-    border-bottom: 2px solid gray;
+    border: 2px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
     text-align: center;
+    font-size: 12px;
 }
 
 .selectionContainer .selectionItem.selected {
@@ -35,7 +37,7 @@
     border:  none;
     background-color: #181818;
     height: 100%;
-    font-size: 24px;
+    font-size: 1.25rem;
     font-weight: bold;
     color: gray;
 }
@@ -58,7 +60,7 @@
 
 .selectionItemContent.active {
     display: block;
-    padding: 15px;
+    padding: 16px;
 }
 
 .slideContainer {
@@ -66,7 +68,7 @@
     width: 1300px;
     height: 650px;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -75,10 +77,12 @@
     width: 100%;
     height: 100%;
     transition: transform 0.5s ease-in-out;
+    
 }
 
 .slide {
     min-width: 100%;
+    background: #181818;
 }
 
 img.slide {
@@ -98,26 +102,26 @@ img.slide {
     background: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 12px;
     cursor: pointer;
 }
 
 .indicators {
     position: absolute;
-    bottom: 10px;
+    bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     border: 2px solid gray;
-    border-radius: 15px;
+    border-radius: 16px;
     background: rgba(34, 34, 34, 0.5);
-    padding: 5px 5px;
+    padding: 4px 4px;
 }
 
 .indicator {
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
+    width: 8px;
+    height: 8px;
+    margin: 0 0.25rem;
     background: #333;
     border-radius: 50%;
     transition: background 0.3s;
@@ -137,19 +141,21 @@ img.slide {
 
 .sbs {
     border: 2px solid gray;
-    border-radius: 15px;
+    border-radius: 16px;
     margin: 0 auto;
 }
 
 .linksBox {
-    padding: 10px 40px;
+    padding: 12px 40px;
+    background: #181818;
 }
 
 .descriptionBox {
     border: 2px solid gray;
-    border-radius: 15px;
-    margin-top: 10px;
-    padding: 10px;
+    border-radius: 16px;
+    margin-top: 0.75rem;
+    padding: 12px;
+    background: #181818;
 }
 
 .descriptionBox h4 {

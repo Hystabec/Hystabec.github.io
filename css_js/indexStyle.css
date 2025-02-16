@@ -15,15 +15,15 @@ img {
 
 .sbs {
     border: 2px solid gray;
-    border-radius: 15px;
-    margin: 0px 10px;
+    border-radius: 16px;
+    margin: 0px 0.75rem;
 }
 
 .magin10px {
-    margin: 10px;
+    margin: 0.75rem;
 }
 
 .border2px {
     border: 2px solid gray;
-    border-radius: 15px;
+    border-radius: 16px;
 }
