@@ -93,7 +93,9 @@
                         <h4>Role:</h4> Programmer.<br>
                         <h4>State:</h4> Released.<br>
                         <h4>Project length:</h4> 8 Weeks.<br>
-                        <h4>About:</h4> While working on Absorbathon I focused on AI and procedural level generation.
+                        <h4>About:</h4> While working on Absorbathon I mainly focused on enemy ai and procedural level generation.<br>
+                        The enemy ai uses a finite state machine and follows through various set states depending on the type of the ai (attack, flee). They use vision cones to be able to detect the player and then can either enter attack or flee states depending on the ai type.<br>
+                        For procedural level generation I used a grid system that two random points on the grid are generated that are between a specified minimum and maximum Manhattan distance, then a path finding algorithm is used to generate a path between the start and end. Then the next step is to loop through all the path cells and do a check to see if a random walk should take place each step of the walk decreases the chance of the next step happening. Once the random walk is finished the path finding algorithm is used to generate a path from the end of the walk to the midpoint between the start of the walk and the end of the main path, this is the repeated for the remaining main path cells. The use of these systems together generates branching dungeons with few dead ends and a medium density of rooms.
                     </p>
                 </div>
             </div>
