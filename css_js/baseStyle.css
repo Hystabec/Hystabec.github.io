@@ -97,3 +97,7 @@ body {
 .mainContent a {
     color: #E73024;
 }
+
+.genBoxShadow {
+    box-shadow: 5px 5px 10px black;
+}

@@ -88,7 +88,7 @@ asButtons[0].addEventListener("click", ()=>{
 
     currentlyActive=0;
 
-    resizeSideBar(originalPageSize, selecContent0.getBoundingClientRect().height + selectionBarHeight);
+    //resizeSideBar(originalPageSize, selecContent0.getBoundingClientRect().height + selectionBarHeight);
 
     switchViewCase("DD");
 });
@@ -104,7 +104,7 @@ asButtons[1].addEventListener("click", ()=>{
 
     currentlyActive=1;
 
-    resizeSideBar(originalPageSize, selecContent1.getBoundingClientRect().height + selectionBarHeight);
+    //resizeSideBar(originalPageSize, selecContent1.getBoundingClientRect().height + selectionBarHeight);
 
     switchViewCase("A");
 });
@@ -120,7 +120,7 @@ asButtons[2].addEventListener("click", ()=>{
 
     currentlyActive=2;
 
-    resizeSideBar(originalPageSize, selecContent2.getBoundingClientRect().height + selectionBarHeight);
+    //resizeSideBar(originalPageSize, selecContent2.getBoundingClientRect().height + selectionBarHeight);
 
     switchViewCase("LH");
 });
@@ -136,7 +136,7 @@ asButtons[3].addEventListener("click", ()=>{
 
     currentlyActive=3;
 
-    resizeSideBar(originalPageSize, selecContent3.getBoundingClientRect().height + selectionBarHeight);
+    //resizeSideBar(originalPageSize, selecContent3.getBoundingClientRect().height + selectionBarHeight);
 
     switchViewCase("DE");
 });
@@ -152,7 +152,7 @@ asButtons[4].addEventListener("click", ()=>{
 
     currentlyActive=4;
 
-    resizeSideBar(originalPageSize, selecContent4.getBoundingClientRect().height + selectionBarHeight);
+    //resizeSideBar(originalPageSize, selecContent4.getBoundingClientRect().height + selectionBarHeight);
 
     switchViewCase("GE");
 });

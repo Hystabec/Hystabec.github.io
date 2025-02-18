@@ -37,11 +37,17 @@
 
 .selectionContainer .selectionItem button {
     border:  none;
-    background-color: #181818;
+    background-color: rgba(0, 0, 0, 0);
     height: 100%;
     font-size: 1.25rem;
     font-weight: bold;
     color: gray;
+    transition: all 0.3s ease-in-out;
+}
+
+.selectionContainer .selectionItem:not(.selected) button:hover  {
+    color: rgb(189, 189, 189);
+    transform: scale(1.05);
 }
 
 .selectionContainer .selectionItem.fillerItem {
@@ -71,7 +77,6 @@
     height: 650px;
     overflow: hidden;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .slides {
