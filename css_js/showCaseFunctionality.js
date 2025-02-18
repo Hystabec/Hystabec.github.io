@@ -163,7 +163,7 @@ const selectionBarHeight = selecItem0.getBoundingClientRect().height;
 
 //-------------Gallery fun----------------
 let gal_Index = 0;
-let slideInterval = setInterval(nextSlide, 5000, "DD");
+let slideInterval = setInterval(nextSlide, 10000, "DD");
 
 let gal_slides;
 let gal_indicatorsCountainer;
@@ -207,7 +207,7 @@ function switchViewCase(sh)
 
 function resetInterval(sh) {
     clearInterval(slideInterval);
-    slideInterval = setInterval(nextSlide, 5000, sh);
+    slideInterval = setInterval(nextSlide, 10000, sh);
 }
 
 function startSlide(sh) {
