@@ -29,6 +29,7 @@ body {
     align-items: flex-start;
     border: 2px solid gray;
     position: fixed;
+    box-shadow: 5px 5px 10px black;
 }
 
 .sideBar .title h2 {

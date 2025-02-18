@@ -73,7 +73,7 @@
     border-radius: 8px;
     border: 2px solid gray;
     background-color: #1f1f1f;
-    box-shadow: 5px 5px 10px black;
+    box-shadow: 5px 5px 10px #dcdcdc;
 }
 
 .gridItem img {
