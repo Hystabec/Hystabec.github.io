@@ -1,27 +1,27 @@
-function resizeSideBar(defaultHeight, contentHeight)
+/*function resizeSideBar(defaultHeight, contentHeight)
 {
     let sideBar = document.getElementById("sideBarBox");
     let mainContent = document.getElementById("mainContentBox");
 
     if(contentHeight > defaultHeight)
     {
-        sideBar.style.height = contentHeight + "px";
+        //sideBar.style.height = contentHeight + "px";
         resizeTopBarExtra(widthTaken);
         return contentHeight;
     }
     else
     {
-        sideBar.style.height = defaultHeight + "px";
+        //sideBar.style.height = defaultHeight + "px";
         resizeTopBarExtra(widthTaken);
         return defaultHeight;
     }
-}
+}*/
 
 function resizeTopBarExtra(newSize)
 {
     let selecItemFiller = document.getElementById("selectionItem_Filler");
     selecItemFiller.style.width = (document.getElementById("selectionBarContainer").getBoundingClientRect().width - newSize) + "px";
-}
+} 
 
 const selecItem0 = document.getElementById("selectionItem_0");
 const selecItem1 = document.getElementById("selectionItem_1");
@@ -159,7 +159,7 @@ asButtons[4].addEventListener("click", ()=>{
 
 const originalPageSize = document.getElementById("sideBarBox").getBoundingClientRect().height;
 const selectionBarHeight = selecItem0.getBoundingClientRect().height;
-resizeSideBar(originalPageSize, selecContent0.getBoundingClientRect().height + selectionBarHeight);
+//resizeSideBar(originalPageSize, selecContent0.getBoundingClientRect().height + selectionBarHeight);
 
 //-------------Gallery fun----------------
 let gal_Index = 0;

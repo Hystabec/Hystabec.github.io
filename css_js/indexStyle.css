@@ -1,29 +1,92 @@
-.container .mainContent .backgroundCard {
-    align-items: center;
-    width: 100%;
-    height: 100%;
+.centreItemsHorizontal {
+    margin-left: auto;
+    margin-right: auto;
 }
 
-img {
-    width: 250px;
+.autoWidth {
+    width: auto;
+}
+
+.centreItemsHorizontal {
+    width: 60%;
+}
+
+.Card {
+    margin: 32px 0px;
+    border: 2px solid gray;
+    border-radius: 12px;
+    padding: 0px 12px;
+    background-color: #181818;
+    box-shadow: 5px 5px 10px black;
 }
 
 .sideBySide {
     display: flex;
-    
+    align-items: center;
 }
 
 .sbs {
-    border: 2px solid gray;
-    border-radius: 16px;
-    margin: 0px 0.75rem;
+    margin: 0 auto;
+    padding: 4px 12px;
 }
 
-.magin10px {
-    margin: 0.75rem;
+.textContainer {
+    width: 70%; 
 }
 
-.border2px {
+.textContainer h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+}
+
+.textContainer p {
+    font-size: 0.75rem;
+    color: #a5a5a5;
+}
+
+.portraitImage img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
     border: 2px solid gray;
-    border-radius: 16px;
+}
+
+.cardContent {
+    padding: 4px 4px;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.gridItem {
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid gray;
+    background-color: #1f1f1f;
+    box-shadow: 5px 5px 10px black;
+}
+
+.gridItem img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.gridItem h3 {
+    margin-top: 10px;
+}
+
+.iUse ul {
+    list-style-position: inside;
 }

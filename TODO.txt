@@ -1,11 +1,8 @@
 ---General---
 Format text (<p>) in a more visually appealing way
-add website created by me somewhere? at bottom of page?
 
 ---Home page---
-fill out bio.
 add a better image of myself
-fill out skills and format the image and skill better
 instead of the "Edward Short - Programmer" that should probably be more specific e.g. "Games Programmer" and it should probably be better incorporated into the page design
 add compilation of work video 
 
@@ -17,4 +14,5 @@ mention website creation?
 
 ---Links page---
 Line links on one side?
+Line links down the centre
 add a contact me section?
