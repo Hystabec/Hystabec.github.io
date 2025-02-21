@@ -12,7 +12,7 @@
 }
 
 .Card {
-    margin: min(32px, 8%) 0px;
+    margin: 32px 0px;
     border: 2px solid gray;
     border-radius: 12px;
     padding: 0px 12px;
@@ -115,7 +115,7 @@
 
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
 
     .centreItemsHorizontal {
         width: 100%;
@@ -123,10 +123,6 @@
 
     .Card {
         margin: 16px 0px;
-    }
-
-    .textContainer h1 {
-        font-size: 2.5rem;
     }
 
     .textContainer p {
@@ -151,4 +147,13 @@
     .gridItem h3 {
         font-size: 1rem;
     }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .textContainer h1 {
+        font-size: 2.5rem;
+    }
+
 }
