@@ -16,6 +16,7 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
 }
 
 .sideBar {
@@ -29,7 +30,6 @@ body {
     align-items: flex-start;
     border: 2px solid gray;
     position: fixed;
-    box-shadow: 5px 5px 10px black;
 }
 
 .sideBar .title h2 {
@@ -87,6 +87,35 @@ body {
     transform: scale(1.05);
 }
 
+.topMobileSelector {
+    display: none;
+}
+
+.topMobileSelector ul {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+}
+
+.topMobileSelector ul li {
+    border: 2px gray solid;
+    text-align: center;
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem;
+    width: 100%;
+    display: inline-block;
+}
+
+.topMobileSelector ul li a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #7CDCF0;
+}
+
 .mainContent {
     flex-grow: 0;
     background-color: #1f1f1f;
@@ -101,4 +130,23 @@ body {
 
 .genBoxShadow {
     box-shadow: 5px 5px 10px black;
+}
+
+@media only screen and (max-width: 600px) {
+    .sideBar {
+        display: none;
+    }
+
+    .mainContent {
+        flex-grow: 0;
+        background-color: #1f1f1f;
+        padding: 20px 20px;
+        width: 100%;
+    }
+
+    .topMobileSelector {
+        display: flex;
+        height: 10%;
+        width: 100%;
+    }
 }
