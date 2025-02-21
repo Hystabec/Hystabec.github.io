@@ -46,10 +46,14 @@
     color: #a5a5a5;
 }
 
+.portraitImage {
+    margin: auto auto;
+}
+
 .portraitImage img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
     border: 2px solid gray;
 }
@@ -93,8 +97,21 @@
         width: 100%;
     }
 
+    .Card {
+        margin: 16px 0px;
+    }
+
     .textContainer h1 {
-        font-size: 1rem;
+        font-size: 1.25rem;
+    }
+
+    .textContainer p {
+        padding-top: 5%;
+    }
+
+    .portraitImage img {
+        width: 100px;
+        height: 100px;
     }
 
     .gridContainer {
