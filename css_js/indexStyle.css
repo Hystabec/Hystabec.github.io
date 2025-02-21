@@ -8,7 +8,7 @@
 }
 
 .centreItemsHorizontal {
-    width: 60%;
+    width: 80%;
 }
 
 .Card {
@@ -83,10 +83,31 @@
     border-radius: 8px;
 }
 
-.gridItem h3 {
-    margin-top: 10px;
-}
-
 .iUse ul {
     list-style-position: inside;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .centreItemsHorizontal {
+        width: 100%;
+    }
+
+    .textContainer h1 {
+        font-size: 1rem;
+    }
+
+    .gridContainer {
+        padding: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .gridItem img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .gridItem h3 {
+        font-size: 1rem;
+    }
 }

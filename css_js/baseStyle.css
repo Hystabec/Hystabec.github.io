@@ -1,3 +1,7 @@
+html {
+    font-size: 16px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -54,7 +58,6 @@ body {
     width: 210px;
     margin-bottom: 1rem;
     text-align: center;
-    
 }
 
 .sideBar nav ul li .currentPage {
@@ -108,12 +111,20 @@ body {
     padding: 0.25rem 0.75rem;
     width: 100%;
     display: inline-block;
+    background: #181818;
 }
 
 .topMobileSelector ul li a {
     font-weight: bold;
+    font-size: 1.25rem;
     text-decoration: none;
     color: #7CDCF0;
+}
+
+.topMobileSelector ul li p {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #CE723C;
 }
 
 .mainContent {
@@ -133,6 +144,7 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+
     .sideBar {
         display: none;
     }
@@ -141,11 +153,13 @@ body {
         flex-grow: 0;
         background-color: #1f1f1f;
         padding: 20px 20px;
+        padding-top: 40px;
         width: 100%;
     }
 
     .topMobileSelector {
         display: flex;
+        position: fixed;
         height: 10%;
         width: 100%;
     }
