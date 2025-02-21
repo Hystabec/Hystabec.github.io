@@ -150,6 +150,7 @@ body {
 /* 600px, 601px, 768px 992px 1200px */
 
 @media only screen and (max-width: 1200px) {
+    
     .sideBar {
         display: none;
     }
