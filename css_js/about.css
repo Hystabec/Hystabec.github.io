@@ -74,8 +74,8 @@
 .contactForm {
     background: #181818;
     padding: 20px;
-    border-radius: 8px;
-    width: 95%;
+    border-radius: 16px;
+    width: 100%;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -89,7 +89,7 @@
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 .contactForm button {
     width: 50%;
