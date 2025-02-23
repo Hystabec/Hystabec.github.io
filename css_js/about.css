@@ -1,16 +1,28 @@
+.sideBySide {
+    display: flex;
+}
+
+.linkBoxWidth {
+    width: 35%;
+}
+
+.contactMeWidth {
+    width: 65%;
+}
+
 .LinkContainer {
-    width: 50%;
-    justify-content: center;
-    margin: 0 auto;
-    transform: translateY(25%);
+    margin: 0 0;
+    background: #181818;
+    padding: 12px 20px;
+    border-radius: 16px;
+    border: 2px solid gray;
 }
 
 .LinkContainer h2 {
-    text-align: center;
-    font-size: 2.0em;
+    font-size: 1.5em;
     color: #CE723C;
-    width: auto;
-    min-width: 355px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .mainContent ul {
@@ -26,35 +38,104 @@
     cursor: pointer;
 }
 
-.mainContent ul li:nth-child(odd) {
-    justify-content: flex-start;
-    text-align: left;
-}
-
-.mainContent ul li:nth-child(even) {
-    justify-content: flex-end;
-    text-align: right; 
-}
-
 .mainContent ul a {
     display: flex;
     align-items: center;
     gap: 16px;
     padding: 12px 20px;
-    background: rgba(255,255,255,0.2);
+    background: #181818;
     border-radius: 16px;
     font-size: 1.5em;
     font-weight: bold;
     color: white;
     text-decoration: none;
+    width: 75%;
+    border: 2px solid gray;
     transition: all 0.3s ease-in-out;
 }
 
 .mainContent ul a:hover {
-    background: rgba(255,255,255,0.4);
+    background: #353535;
     transform: scale(1.1);
 }
 
 .mainContent ul li img {
     height: 40px;
+    width: 40px;
+    object-fit: contain;
+}
+
+.contactMe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactForm {
+    background: #181818;
+    padding: 20px;
+    border-radius: 8px;
+    width: 95%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gray;
+}
+.contactForm h2 {
+    text-align: center;
+}
+.contactForm input, .contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.contactForm button {
+    width: 50%;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contactForm button:hover {
+    background: #218838;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .links li a {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .sideBySide {
+        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sbs {
+        padding-top: 2rem;
+    }
+
+    .linkBoxWidth {
+        width: 95%;
+    }
+    
+    .contactMeWidth {
+        width: 95%;
+    }
+
+    .links li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
