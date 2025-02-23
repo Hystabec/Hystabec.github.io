@@ -19,7 +19,7 @@
 }
 
 .LinkContainer h2 {
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: #CE723C;
     font-weight: bold;
     text-align: center;
@@ -45,7 +45,7 @@
     padding: 12px 20px;
     background: #181818;
     border-radius: 16px;
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: bold;
     color: white;
     text-decoration: none;
@@ -69,18 +69,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.contactForm {
     background: #181818;
+
     padding: 20px;
     border-radius: 16px;
     width: 100%;
-    align-items: center;
+    border: 2px solid gray;
+    margin: 0 1rem;
+}
+
+.contactForm {
+    width: 90%;
     display: flex;
     flex-direction: column;
-    border: 2px solid gray;
+    align-items: center;
 }
+
 .contactForm h2 {
     text-align: center;
 }
@@ -131,6 +135,10 @@
     
     .contactMeWidth {
         width: 95%;
+    }
+
+    .contactMe {
+        margin: 1rem 0;
     }
 
     .links li {
