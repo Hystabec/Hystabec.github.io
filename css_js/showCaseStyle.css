@@ -213,6 +213,11 @@ img.slide {
     width: 500px;
 }
 
+.showCaseVideo {
+    aspect-ratio: 16 / 9;
+    width: 100% !important
+}
+
 .sideBySide {
     display: flex;
 }

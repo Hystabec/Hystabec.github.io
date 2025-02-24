@@ -123,6 +123,9 @@
                         For procedural level generation I used a grid system that two random points on the grid are generated that are between a specified minimum and maximum Manhattan distance, then a path finding algorithm is used to generate a path between the start and end. Then the next step is to loop through all the path cells and do a check to see if a random walk should take place each step of the walk decreases the chance of the next step happening. Once the random walk is finished the path finding algorithm is used to generate a path from the end of the walk to the midpoint between the start of the walk and the end of the main path, this is the repeated for the remaining main path cells. The use of these systems together generates branching dungeons with few dead ends and a medium density of rooms.
                     </p>
                 </div>
+                <div class="showcaseVideoBox descriptionBox genBoxShadow">
+                    <iframe class="showCaseVideo" src="https://www.youtube.com/embed/Q2H9wK-MIMU?si=XtJmWVnOSoCjkOX-" allowfullscreen></iframe>
+                </div>
             </div>
             <div id="selectionItemContent_2" class="selectionItemContent">
                 <div class="sideBySide">
@@ -152,6 +155,9 @@
                         <h4>Project length:</h4> 1 Week.<br>
                         <h4>About:</h4> Looping Halls is a tech demo that has the player placed in a small corridor like environment where they are free to walk around. There is a central room with 2 branching corridors going down either corridor will cause the player to loop back to the beginning hallway. When going down the right hallway there is a 25% chance it will infinitely loop util the player turns around and goes back the way they came where they will then go back into the central room. As the player keeps moving through loops of the environment items will appear and disappear, for example on the 2nd loop a chair will appear in the central room and on the 3rd loop a section of wall on the right side of the central room will disappear revealing a 3rd corridor. The looping trick is achieved through the use of a 2nd camera and render planes, when the player touches certain triggers, it will cause the 2nd camera to start mimicking the rotation and position but in a different part of the environment. The camera's view is then projected onto a render plane so that it appears as one seamless corridor even though its two completely separate parts of the map. When the player touches the render plane they are then teleported to where the second camera was so they appear to have not move at all.
                     </p>
+                </div>
+                <div class="showcaseVideoBox descriptionBox genBoxShadow">
+                    <iframe class="showCaseVideo" src="https://www.youtube.com/embed/9nlalhmI9QY?si=dkisVikM1JuGpWz3" allowfullscreen></iframe>
                 </div>
             </div>
             <div id="selectionItemContent_3" class="selectionItemContent"> 
