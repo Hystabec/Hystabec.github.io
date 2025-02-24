@@ -146,7 +146,7 @@
     }
 
     .LinkContainer {
-        min-width: none;
+        min-width: 0;
     }
 
     .contactMe {
