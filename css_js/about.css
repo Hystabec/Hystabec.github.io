@@ -16,6 +16,7 @@
     padding: 12px 20px;
     border-radius: 16px;
     border: 2px solid gray;
+    min-width: 340px;
 }
 
 .LinkContainer h2 {
@@ -88,6 +89,7 @@
 .contactForm h2 {
     text-align: center;
 }
+
 .contactForm input, .contactForm textarea {
     width: 100%;
     padding: 10px;
@@ -95,6 +97,11 @@
     border: 1px solid #ccc;
     border-radius: 8px;
 }
+
+.contactForm .message {
+    height: 10rem;
+}
+
 .contactForm button {
     width: 50%;
     padding: 10px;
@@ -104,6 +111,7 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
 .contactForm button:hover {
     background: #218838;
 }
@@ -132,9 +140,13 @@
     .linkBoxWidth {
         width: 95%;
     }
-    
+
     .contactMeWidth {
         width: 95%;
+    }
+
+    .LinkContainer {
+        min-width: none;
     }
 
     .contactMe {
