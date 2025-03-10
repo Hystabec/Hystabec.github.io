@@ -222,6 +222,15 @@ img.slide {
     display: flex;
 }
 
+/*.sideBySide .left {
+    
+}*/
+
+.sideBySide .right {
+    flex-grow: 1;
+    margin-left: 1.5rem;
+}
+
 .sbs {
     border: 2px solid gray;
     border-radius: 16px;
@@ -229,8 +238,23 @@ img.slide {
 }
 
 .linksBox {
-    padding: 12px 40px;
     background: #181818;
+}
+
+.linksBox a {
+    display: flex;
+    width: auto;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid gray;
+    border-radius: 16px;
+    color: #7CDCF0;
+    transition: all 0.3s ease-in-out;
+}
+
+.linksBox a:hover {
+    color: #2D7AD6;
+    transform: scale(1.025);
 }
 
 .descriptionBox {
@@ -299,6 +323,10 @@ img.slide {
 
     .sideBySide {
         display: block;
+    }
+
+    .sideBySide .right {
+        margin-left: 0px;
     }
 
     .slideContainer {
