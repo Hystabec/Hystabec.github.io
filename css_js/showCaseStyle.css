@@ -228,7 +228,7 @@ img.slide {
 
 .sideBySide .right {
     flex-grow: 1;
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 }
 
 .sbs {
@@ -260,7 +260,7 @@ img.slide {
 .descriptionBox {
     border: 2px solid gray;
     border-radius: 16px;
-    margin-top: 0.75rem;
+    margin-top: 1rem;
     padding: 12px;
     background: #181818;
 }
