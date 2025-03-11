@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css_js/baseStyle.css">
     <link rel="stylesheet" href="css_js/showCaseStyle.css">
+    <link rel="icon" type="png" href="imgs/other/siteIcon.png">
     <title>ES - Showcase</title>
 </head>
 <body>
@@ -85,13 +86,45 @@
                     </div>
                 </div>
                 <div class="descriptionBox genBoxShadow">
-                    <p>
-                        Democracy Demolition is a 2D, 2 player, couch co-op, artillery game made using Unity.<br>
-                        <h4>Role:</h4> Lead Programmer.<br>
-                        <h4>State:</h4> Released.<br>
-                        <h4>Project length:</h4> 8 Weeks.<br>
-                        <h4>About:</h4> Democracy Demolition was developed during my 2nd year of university in a group of 6, 3 designers and 3 programmers. While working on Democracy Demolition I acted as the Lead Programmer, leading 2 other programmers. As the lead programmer I deligated tasks as well as mentored and assisted the other programmers where required. I also focused on creating the local multiplayer capabilities and making many underlying systems such as score functionality, the round and life systems just to name a few. I also worked on maintaining clean and efficient code where possible.
-                    </p>
+                    <section>
+                        Democracy Demolition is a 2D, 2 player, couch co-op, artillery game made using Unity.
+                    </section>
+                    <section>
+                        <h4>Role:</h4> Lead Programmer<br>
+                        <h4>State:</h4> Released on Itch.io<br>
+                        <h4>Project length:</h4> 8 Weeks
+                    </section>
+                    <section>
+                        <h4>About:</h4> Democracy Demolition was developed during my 2nd year of university in a group consisting of 2 designers and 3 programmers. While working in the project I was the lead programmer and I delegated the programming tasks as well as mentored and assisted the other programmers. I worked closely with the lead designer to make sure the project goals were realistic and that we weren't overscopping with the initial design idea when it came to the technical side of the game.
+                    </section>
+                    <section>
+                        <h4>Contribution:</h4>
+                        Along side my leadership role I focused on making many of the underlying systems:
+                        <ul>
+                            <li>Local multiplayer capabilities</li>
+                            <li>Controller input system</li>
+                            <li>Character controller</li>
+                            <li>Round and life systems</li>
+                            <li>Ability to pause the game</li>
+                            <li>Random block and trap system</li>
+                        </ul>
+                        As well as focusing on bug fixing and maintaining code through the project.
+                    </section>
+                    <section>
+                        <h4>Notable issues encountered:</h4>
+                        <ul class="bugList">
+                            <li>
+                                <h5>Controllers spawning many player instances:</h5> On the main menu the first input from two different controllers would spawn an input handler and bind that controller to player one or two, however after entering the game then going back to the main menu the next two inputs would spawn another two input handlers which would then be bound to one of the players which would then either cause a null reference exception or cause each input to be handled twice.<br>
+                                <h5>Solution:</h5> When in the main menu two main checks would happen: the first check is if any input handlers exist and the number of them, if two input handlers are found any new input from different controllers would not spawn an input handler. The second check is if the main menu has been visited before and if it has then two player handlers should already exist so the ability to spawn more through inputs is disabled.
+                            </li>
+                            <br>
+                            <li>
+                                <h5>Player holding both a trap and block:</h5> During the build phase of the game the player was able to hold both a block and a trap allowing them to move and place both at the same time causing unintended behaviour this was due to the player controller's holding functionality having two boolean that checked if they were holding a block or trap and when trying to select another block the booleans were not being properly checked.
+                                <br>
+                                <h5>Solution:</h5> To fix this issue I created an interface class that both blocks and traps inherited from so that when doing non specialized tasks, e.g. being selected and manipulated by the player, they could be treated the same but they could still do their specialized tasks when needed, e.g. when a TNT get hit by a projectile it explodes.
+                            </li>
+                        </ul>
+                    </section>
                 </div>
                 <div class="showcaseVideoBox descriptionBox genBoxShadow">
                     <iframe class="showCaseVideo" src="https://www.youtube.com/embed/c9kri_3-jAU?si=D4zeLtTlQvJCCuYR" allowfullscreen></iframe>
@@ -115,15 +148,44 @@
                     </div>
                 </div>
                 <div class="descriptionBox genBoxShadow">
-                    <p>
-                        Absorbathon is a 2D, side scrolling, arcade-style game made using Unity.<br>
-                        <h4>Role:</h4> Programmer.<br>
-                        <h4>State:</h4> Released.<br>
-                        <h4>Project length:</h4> 8 Weeks.<br>
-                        <h4>About:</h4> While working on Absorbathon I mainly focused on enemy ai and procedural level generation.<br>
-                        The enemy ai uses a finite state machine and follows through various set states depending on the type of the ai (attack, flee). They use vision cones to be able to detect the player and then can either enter attack or flee states depending on the ai type.<br>
-                        For procedural level generation I used a grid system that two random points on the grid are generated that are between a specified minimum and maximum Manhattan distance, then a path finding algorithm is used to generate a path between the start and end. Then the next step is to loop through all the path cells and do a check to see if a random walk should take place each step of the walk decreases the chance of the next step happening. Once the random walk is finished the path finding algorithm is used to generate a path from the end of the walk to the midpoint between the start of the walk and the end of the main path, this is the repeated for the remaining main path cells. The use of these systems together generates branching dungeons with few dead ends and a medium density of rooms.
-                    </p>
+                    <section>
+                        Absorbathon is a 2D, side scrolling, arcade-style game made using Unity.
+                    </section>
+                    <section>
+                        <h4>Role:</h4> Programmer<br>
+                        <h4>State:</h4> Released on Itch.io<br>
+                        <h4>Project length:</h4> 8 Weeks
+                    </section>
+                    <section>
+                        <h4>About:</h4> Absorbathon was developed during my 3rd year of university in a group consisting of 4 designers and 2 programmers. In the early stages of Absorbathon all members of the group came up with idea on mechanics and design choice for what the game would become. While working on Absorbathon I worked closely with the other programmer to delegate tasks that align with our strengths so that we could both work on area of the game that we are familiar with.
+                    </section>
+                    <section>
+                        <h4>Contribution:</h4>
+                        <ul>
+                            <li>Procedural level generation</li>
+                            <li>Enemy AI</li>
+                            <li>Enemy bullet object pooling</li>
+                            <li>player combo system</li>
+                            <li>Score tracking</li>
+                            <li>Local save data storage/File saving</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h4>Notable issues encountered:</h4>
+                        <ul class="bugList">
+                            <li>
+                                <h5>Bug 1:</h5> 
+                                <br>
+                                <h5>Solution:</h5> 
+                            </li>
+                            <br>
+                            <li>
+                                <h5>Bug 2:</h5> 
+                                <br>
+                                <h5>Solution:</h5> 
+                            </li>
+                        </ul>
+                    </section>
                 </div>
                 <div class="showcaseVideoBox descriptionBox genBoxShadow">
                     <iframe class="showCaseVideo" src="https://www.youtube.com/embed/Q2H9wK-MIMU?si=XtJmWVnOSoCjkOX-" allowfullscreen></iframe>
@@ -149,13 +211,17 @@
                     </div>
                 </div>
                 <div class="descriptionBox genBoxShadow">
-                    <p>
-                        Looping Halls is a tech demo project that experiments and showcases world looping and non euclidean geometry in Unity.<br>
+                    <section>
+                        Looping Halls is a tech demo project that experiments and showcases world looping and non euclidean geometry in Unity.
+                    </section>
+                    <section>
                         <h4>Role:</h4> Solo developer.<br>
                         <h4>State:</h4> Released.<br>
-                        <h4>Project length:</h4> 1 Week.<br>
+                        <h4>Project length:</h4> 1 Week.
+                    </section>
+                    <section>
                         <h4>About:</h4> Looping Halls is a tech demo that has the player placed in a small corridor like environment where they are free to walk around. There is a central room with 2 branching corridors going down either corridor will cause the player to loop back to the beginning hallway. When going down the right hallway there is a 25% chance it will infinitely loop util the player turns around and goes back the way they came where they will then go back into the central room. As the player keeps moving through loops of the environment items will appear and disappear, for example on the 2nd loop a chair will appear in the central room and on the 3rd loop a section of wall on the right side of the central room will disappear revealing a 3rd corridor. The looping trick is achieved through the use of a 2nd camera and render planes, when the player touches certain triggers, it will cause the 2nd camera to start mimicking the rotation and position but in a different part of the environment. The camera's view is then projected onto a render plane so that it appears as one seamless corridor even though its two completely separate parts of the map. When the player touches the render plane they are then teleported to where the second camera was so they appear to have not move at all.
-                    </p>
+                    </section>
                 </div>
                 <div class="showcaseVideoBox descriptionBox genBoxShadow">
                     <iframe class="showCaseVideo" src="https://www.youtube.com/embed/9nlalhmI9QY?si=dkisVikM1JuGpWz3" allowfullscreen></iframe>
@@ -178,11 +244,15 @@
                     </div>
                 </div>
                 <div class="descriptionBox genBoxShadow">
-                    <p>
-                        Daedalus Engine is a game engine that i'm currently devloping in C++<br>
+                    <section>
+                        Daedalus Engine is a game engine that i'm currently devloping in C++
+                    </section>
+                    <section>
                         <h4>Role:</h4> Solo developer.<br>
-                        <h4>State:</h4> In Development.<br>
-                        <h4>About:</h4> Daedalus engine is planned to have both 2D and 3D rendering capabilities.<br>
+                        <h4>State:</h4> In Development.
+                    </section>
+                    <section>
+                        <h4>About:</h4> Daedalus engine is planned to have both 2D and 3D rendering capabilities.
                         Currently features:<br>
                         <ul>
                             <li>2D rendering using OpenGL</li>
@@ -199,7 +269,7 @@
                             <li>A physics and collision system</li>
                         </ul>
                         <h4>External libraries:</h4> GLFW, GLEW, FreeImage, spdlog, Dear ImGui.
-                    </p>
+                    </section>
                 </div>
             </div>
             <div id="selectionItemContent_4" class="selectionItemContent">
@@ -221,11 +291,15 @@
                     </div>
                 </div>
                 <div class="descriptionBox genBoxShadow">
-                    <p>
-                        FGE is a 2D game engine that I developed using C++.<br>
+                    <section>
+                        FGE is a 2D game engine that I developed using C++.
+                    </section>
+                    <section>
                         <h4>Role:</h4> Solo developer.<br>
                         <h4>State:</h4> Complete.<br>
-                        <h4>Project length:</h4> 22 Weeks.<br>
+                        <h4>Project length:</h4> 22 Weeks.
+                    </section>
+                    <section>
                         <h4>About:</h4> FGE is the first game engine and editor that I made. I made it during my second year of university.<br>
                         It features a working editor that consists of:
                         <ul>
@@ -244,9 +318,8 @@
                             <li>A logging system so that any errors, warnings or information logs created by the engine or user can be logged to console and saved to a file.</li>
                             <li>Multithreading so there is little to no preformance hit when writing the log messages to files.</li>
                         </ul>
-                        
                         <h4>External libraries:</h4> SDL, Dear ImGui and pugixml.
-                    </p>
+                    </section>
                 </div>
                 <div class="showcaseVideoBox descriptionBox genBoxShadow">
                     <iframe class="showCaseVideo" src="https://www.youtube.com/embed/8urdKptY92k?si=oNptTAoiG6D2K9N9" allowfullscreen></iframe>

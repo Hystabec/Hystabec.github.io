@@ -265,12 +265,24 @@ img.slide {
     background: #181818;
 }
 
+.descriptionBox section:not(:first-child) {
+    margin-top: 1rem;
+}
+
 .descriptionBox h4 {
     display: inline;
 }
 
 .descriptionBox ul {
     list-style-position: inside;
+}
+
+.descriptionBox .bugList {
+    list-style: none;
+}
+
+.descriptionBox h5 {
+    display: inline;
 }
 
 @media only screen and (max-width: 1200px) {
