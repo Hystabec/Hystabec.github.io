@@ -175,15 +175,15 @@
                         <h4>Notable issues encountered:</h4>
                         <ul class="bugList">
                             <li>
-                                <h5>Bug 1:</h5> 
+                                <h5>Procedural level felt too linear:</h5> The first version of the procedural level generation used a path finding algorithm to generate a path between two points on a grid then would use a wander algorithm on each of the path cells with a small chance of spawning a cell. This resulted in a linear dungeon with a few short branching paths.
                                 <br>
-                                <h5>Solution:</h5> 
+                                <h5>Solution:</h5> To make the dungeons more branching while also decreasing the chances of having dead ends, I increased the chance for the wander to spawn a cell, which would result in longer wander paths, then I used the path finding algorithm to go from the end of the wander path to the mid-point between the start of the wander path and the end of the main path. This resulted in more branching dungeons that would always loop back to the main path so that the player shouldn't get stuck in a dead end and need to back track.
                             </li>
                             <br>
                             <li>
-                                <h5>Bug 2:</h5> 
+                                <h5>Code for AI was inefficient and difficult to expand:</h5> The first iteration of the AI was using a fairly rigid system of check and functions that worked for a single type but when it came to implementing different AI type it proved to not be a very good solution.
                                 <br>
-                                <h5>Solution:</h5> 
+                                <h5>Solution:</h5> In order to make the system more expandable and efficient I converted the AI to use a finite state machine so that complicated checks didn't need to occur to decide which state to execute but each state would hold their own conditions to transitioning to different states. This resulted in the code being easier to read and use, it was considerably easier to expand and add new states and the code was more efficient as it didn't need to do many check each time it was ran.
                             </li>
                         </ul>
                     </section>
@@ -217,7 +217,7 @@
                     </section>
                     <section>
                         <h4>Role:</h4> Solo developer.<br>
-                        <h4>State:</h4> Released.<br>
+                        <h4>State:</h4> Released on Itch.io.<br>
                         <h4>Project length:</h4> 1 Week.
                     </section>
                     <section>
@@ -246,28 +246,30 @@
                 </div>
                 <div class="descriptionBox genBoxShadow">
                     <section>
-                        Daedalus Engine is a game engine that i'm currently devloping in C++
+                        Daedalus Engine is a game engine that i'm currently developing in C++
                     </section>
                     <section>
                         <h4>Role:</h4> Solo developer.<br>
                         <h4>State:</h4> In Development.
                     </section>
                     <section>
-                        <h4>About:</h4> Daedalus engine is planned to have both 2D and 3D rendering capabilities.
+                        <h4>About:</h4> I am developing Daedalus Engine in order to improve my skills with C++, writing APIs, building large projects and making highly optimized code.<br>
                         Currently features:<br>
                         <ul>
                             <li>2D rendering using OpenGL</li>
-                            <li>An Event dispatch and handling</li>
+                            <li>Event dispatch and handling</li>
                             <li>A logging system that allows for comprehensive console logging</li>
                             <li>A GUI system that allows for adding of GUI elements to the screen using Dear ImGui</li>
                         </ul>
                         Planned features:<br>
                         <ul>
                             <li>3D rendering using OpenGL</li>
+                            <li>Support for Vulkan or DirectX</li>
                             <li>A lighting system</li>
                             <li>A texture and material system</li>
                             <li>Sprite and model loading/manipulation</li>
                             <li>A physics and collision system</li>
+                            <li>Expand the logging system to be able to write to files as well as a custom engine console</li>
                         </ul>
                         <h4>External libraries:</h4> GLFW, GLEW, FreeImage, spdlog, Dear ImGui.
                     </section>
@@ -293,7 +295,7 @@
                 </div>
                 <div class="descriptionBox genBoxShadow">
                     <section>
-                        FGE is a 2D game engine that I developed using C++.
+                        FGE is a 2D game engine and editor that I developed using C++.
                     </section>
                     <section>
                         <h4>Role:</h4> Solo developer.<br>
@@ -301,7 +303,7 @@
                         <h4>Project length:</h4> 22 Weeks.
                     </section>
                     <section>
-                        <h4>About:</h4> FGE is the first game engine and editor that I made. I made it during my second year of university.<br>
+                        <h4>About:</h4> FGE is the first game engine and editor that I made during my second year of university.<br>
                         It features a working editor that consists of:
                         <ul>
                             <li>A save/load system</li>
