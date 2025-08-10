@@ -233,7 +233,10 @@
                 <div class="sideBySide">
                     <div class="slideContainer sbs left genBoxShadow">
                         <div class="slides DE">
-                            <img class="showCaseImage slide DE" src="imgs/DE/DE_ExampleImage.png" alt="image of current renderer">
+                            <img class="showCaseImage slide DE" src="imgs/DE/DE_Editor_Empty.png" alt="image of empty scene">
+                            <img class="showCaseImage slide DE" src="imgs/DE/DE_Example_Scene.png" alt="image of example scene">
+                            <img class="showCaseImage slide DE" src="imgs/DE/DE_Active_Scene.png" alt="image of active scene">
+                            <img class="showCaseImage slide DE" src="imgs/DE/DE_Collider_Example.png" alt="image of 2D physics colliders">
                         </div>
                         <div class="controls">
                             <button class="control" onclick="prevSlide('DE')">&#10094</button>
@@ -247,32 +250,49 @@
                 </div>
                 <div class="descriptionBox genBoxShadow">
                     <section>
-                        Daedalus Engine is a game engine that i'm currently developing in C++
+                        Daedalus Engine is a 2D/3D game engine that i'm currently developing in C++.
                     </section>
                     <section>
                         <h4>Role:</h4> Solo developer.<br>
                         <h4>State:</h4> In Development.
                     </section>
                     <section>
-                        <h4>About:</h4> I am developing Daedalus Engine in order to improve my skills with C++, writing APIs, building large projects and making highly optimized code.<br>
+                        <h4>About:</h4> 
+                        Daedalus Engine is a personal game engine project that i'm developing to improve my C++ skills as well as to help improve my knowledge of game engine and architecting large software systems.<br>
+                        This is the second game engine that I have developed, FGE being the first.<br>
+                        The development of the engine can be followed and viewed on <a href="https://github.com/Hystabec/DaedalusEngine">GitHub</a>.
+                    </section>
+                    <section>
                         Currently features:<br>
                         <ul>
-                            <li>2D rendering using OpenGL</li>
-                            <li>Event dispatch and handling</li>
-                            <li>A logging system that allows for comprehensive console logging</li>
-                            <li>A GUI system that allows for adding of GUI elements to the screen using Dear ImGui</li>
+                            <li>A custom header-only maths library which includes: Vec2, Vec3, Vec4, Mat4, Quaternion.</li>
+                            <li>Event dispatch and handling.</li>
+                            <li>2D Batch rendering using OpenGL.</li>
+                            <li>Texture/image rendering.</li>
+                            <li>A comprehensive user interface using Dear ImGui.</li>
+                            <li>A custom logging library that make use of C++20 std::format and spdlog.</li>
+                            <li>An entity componet system for game entity using Entt.</li>
+                            <li>2D physics using box2d.</li>
+                            <li>Shader cross compilation and caching using SPIR-V.</li>
+                            <li>An, in development, editor application.</li>
+                            <li>Editor Scene serialization using YAML</li>
                         </ul>
                         Planned features:<br>
                         <ul>
-                            <li>3D rendering using OpenGL</li>
-                            <li>Support for Vulkan or DirectX</li>
-                            <li>A lighting system</li>
-                            <li>A texture and material system</li>
-                            <li>Sprite and model loading/manipulation</li>
-                            <li>A physics and collision system</li>
-                            <li>Expand the logging system to be able to write to files as well as a custom engine console</li>
+                            <li>Support for Mac and Linux.</li>
+                            <li>Audio system.</li>
+                            <li>Scripting support (C#).</li>
+                            <li>Rendering with Vulkan.</li>
+                            <li>Rendering with DirectX.</li>
+                            <li>Rendering with Metal.</li>
+                            <li>3D batch rendering.</li>
+                            <li>3D physics engine.</li>
+                            <li>A complete editor application.</li>
+                            <li>A game runtime environment.</li>
                         </ul>
-                        <h4>External libraries:</h4> GLFW, GLEW, FreeImage, spdlog, Dear ImGui.
+                    </section>
+                    <section>
+                        <h4>External libraries:</h4> premake, GLFW, GLEW, stb, spdlog, Dear ImGui, Entt, yaml-cpp, ImGuizmo, SPIR-V (Vulkan), box2d.
                     </section>
                 </div>
             </div>
@@ -305,6 +325,8 @@
                     </section>
                     <section>
                         <h4>About:</h4> FGE is the first game engine and editor that I made during my second year of university.<br>
+                    </section>
+                    <section>
                         It features a working editor that consists of:
                         <ul>
                             <li>A save/load system</li>
@@ -322,6 +344,8 @@
                             <li>A logging system so that any errors, warnings or information logs created by the engine or user can be logged to console and saved to a file.</li>
                             <li>Multithreading so there is little to no preformance hit when writing the log messages to files.</li>
                         </ul>
+                    </section>
+                    <section>
                         <h4>External libraries:</h4> SDL, Dear ImGui and pugixml.
                     </section>
                 </div>
